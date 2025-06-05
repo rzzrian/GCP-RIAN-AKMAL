@@ -61,7 +61,7 @@ resources:
 env_variables:
   CLOUD_SQL_USERNAME: 'root'
   CLOUD_SQL_PASSWORD: '1234'
-  CLOUD_SQL_DATABASE_NAME: 'qardiosis_db'
+  CLOUD_SQL_DATABASE_NAME: 'qardiosis'
   CLOUD_SQL_CONNECTION_NAME: 'qardiosis:asia-southeast2:KUIS-RIAN-AKMAL-BM6B'
 
   CLOUD_STORAGE_BUCKET_NAME: 'bucket-rian-akmal-bm6b'
