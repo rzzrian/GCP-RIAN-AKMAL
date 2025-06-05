@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-runtime: python
-env: flex
+runtime: python39
 entrypoint: gunicorn -t 1000 -b :$PORT main:app
 
-runtime_config:
-  python_version: 3.11
 
 # This sample incurs costs to run on the App Engine flexible environment. 
 # The settings below are to reduce costs during testing and are not appropriate
@@ -62,14 +59,14 @@ env_variables:
   CLOUD_SQL_USERNAME: 'root'
   CLOUD_SQL_PASSWORD: '1234'
   CLOUD_SQL_DATABASE_NAME: 'qardiosis'
-  CLOUD_SQL_CONNECTION_NAME: 'qardiosis:asia-southeast2:KUIS-RIAN-AKMAL-BM6B'
+  CLOUD_SQL_CONNECTION_NAME: 'kuis-rian-akmal-bm6b:asia-southeast2:qardiosis'
 
   CLOUD_STORAGE_BUCKET_NAME: 'bucket-rian-akmal-bm6b'
 
 beta_settings:
   cloud_sql_instances: qardiosis:asia-southeast2:KUIS-RIAN-AKMAL-BM6B
 
-service_account: qardiosis@appspot.gserviceaccount.com
+service_account: kuis-rian-akmal-bm6b@appspot.gserviceaccount.com
 # automatic_scaling:
 #   min_num_instances: 1
 #   max_num_instances: 15
