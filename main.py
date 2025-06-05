@@ -18,6 +18,8 @@ import requests
 import time
 from flask_mail import Message, Mail
 from random import *
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 from test import execute
@@ -63,7 +65,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['UPLOAD_EXTENSIONS'] = ['dcm', 'nii', 'gz', 'zip', 'gzip', 'GZ']
 # ############
 # #Storage Configuration
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'qardiosis-gae.json'
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'qardiosis-gae.json'
 storage_client = storage.Client()
 bucket_name = os.environ.get('CLOUD_STORAGE_BUCKET_NAME')
 bucket = storage_client.bucket(bucket_name)
